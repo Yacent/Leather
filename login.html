@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Leather溯源系统</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+	<div class="login-location">
+		<div class="login-header" id="login-title">
+			<h1>皮具溯源系统</h1>
+		</div>
+		
+		<form method="post" action="/login" id="login-form">
+			<div class="login-content">
+				<input type="text" placeholder="账户" class="login-input" name="username" id="user">
+				<input type="password" placeholder="密码" class="login-input" name="password" id="psw">
+				<select class="login-select un-show"  name="category" id="user-category">
+					<option value="0">系统管理员</option>
+					<option value="1">厂商</option>
+					<option value="2">批发商</option>
+					<option value="3">零售</option>
+				</select>
+				<button type="submit" class="login-btn" id="login">登陆</button>
+				<button type="submit" class="login-btn-register un-show" id="register ">注册</button>
+			</div>
+		</form>
+		<a href="javascript:void(0);" class="login-a-register login-a">还没有账号? 前往注册</a>
+		<a href="javascript:void(0);" class="login-a-login login-a un-show">已有账号? 直接登陆</a>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+</body>
+</html>
