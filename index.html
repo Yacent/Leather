@@ -4,8 +4,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>后台模板管理系统</title>
 <link type="text/css" rel="stylesheet" href="css/style.css" />
-<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="js/menu.js"></script>
+
+<!-- 新 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="css/bootstrap.css">
+
+<!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<link rel="stylesheet" src="css/bootstrap-theme.css">
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="js/bootstrap.js"></script>
+
+<script type="text/javascript" src="js/action.js">
+
+</script>
 </head>
 
 <body>
@@ -28,54 +41,46 @@
       <li>
           <h4 class="M1"><span></span>来料加工</h4>
           <div class="list-item none">
-
+						<a href="javascript:void(0);" onclick="changeMB(0);" value="#lailiaojiagong">来料加工</a>
           </div>
         </li>
         <li>
           <h4 class="M2"><span></span>生产管理</h4>
           <div class="list-item none">
-            <a href=''>批次管理</a>
-            <a href=''>工序管理</a>
+            <a href="javascript:void(0);" onclick="changeMB(1)">批次管理</a>
+            <a href="javascript:void(0);" onclick="changeMB(2)">工序管理</a>
            </div>
         </li>
         <li>
           <h4 class="M3"><span></span>产品管理</h4>
           <div class="list-item none">
-            <a href=''>出厂产品</a>
-            <a href=''>库存产品</a>
-            <a href=''>经销记录</a>
+            <a href="javascript:void(0);" onclick="changeMB(3)">出厂产品</a>
+            <a href="javascript:void(0);" onclick="changeMB(4)">库存产品</a>
+            <a href="javascript:void(0);" onclick="changeMB(5)">经销记录</a>
           </div>
         </li>
 				<li>
           <h4 class="M4"><span></span>车间管理</h4>
           <div class="list-item none">
-
+						<a href="javascript:void(0);" onclick="changeMB(6)">车间管理</a>
           </div>
         </li>
 				<li>
           <h4 class="M5"><span></span>工人管理</h4>
           <div class="list-item none">
-
+						<a href="javascript:void(0);" onclick="changeMB(7)">工人管理</a>
           </div>
         </li>
 				<li>
           <h4  class="M6"><span></span>商家管理</h4>
           <div class="list-item none">
-
+						<a href="javascript:void(0);" onclick="changeMB(8)">商家管理</a>
           </div>
         </li>
 				<li>
           <h4  class="M7"><span></span>系统管理</h4>
           <div class="list-item none">
-            <a href=''>奖励管理1</a>
-            <a href=''>奖励管理2</a>
-            <a href=''>奖励管理3</a>
-          </div>
-        </li>
-				<li>
-          <h4   class="M8"><span></span>字典维护</h4>
-          <div class="list-item none">
-
+            <a href="javascript:void(0);" onclick="changeMB(9)">系统管理</a>
           </div>
         </li>
   </ul>
@@ -92,11 +97,819 @@
 			</div>
 			<div class="main">
 
+				<div class="container-fluid mianban" id="lailiaojiagong">
+					<br/>
+					<div class="row">
+					<div class="col-sm-12">
+						<section class="panel">
+							<header class="panel-heading">
+								来料加工
+							</header>
+							<div class="panel-body">
+								<section>
+									<div class="btn-heading">
+										<!-- Button trigger modal -->
+										<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-material">
+										  添加
+										</button>
+									</div>
+									<br/>
+									<table class="table table-hover table-bordered ">
+										<thead>
+											<td>
+												来料序号
+											</td>
+											<td>
+												皮质
+											</td>
+											<td>
+												供应商
+											</td>
+											<td>
+												操作
+											</td>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													12
+												</td>
+												<td>
+													A
+												</td>
+												<td>
+													Apple
+												</td>
+												<td>
+													<button type="button" class="btn btn-primary btn-xs">删除</button>
+													<button type="button" class="btn btn-primary btn-xs">修改</button>
+													<button type="button" class="btn btn-primary btn-xs">检测</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</section>
+							</div>
+						</section>
+					</div>
+					</div>
+
+				</div>
+				<!-- container -->
+				<!-- material -->
+
+
+				<div class="container-fluid mianban" id="piciguanli">
+					<br/>
+					<div class="row">
+					<div class="col-sm-12">
+						<section class="panel">
+							<header class="panel-heading">
+								批次管理
+							</header>
+							<div class="panel-body">
+								<section>
+									<div class="btn-heading">
+										<!-- Button trigger modal -->
+										<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-pici">
+											添加批次
+										</button>
+									</div>
+									<br/>
+									<table class="table table-hover table-bordered ">
+										<thead>
+											<td>
+												产品批次
+											</td>
+											<td>
+												产品名称
+											</td>
+											<td>
+												投产日期
+											</td>
+											<td>
+												操作
+											</td>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													12
+												</td>
+												<td>
+													A
+												</td>
+												<td>
+													Apple
+												</td>
+												<td>
+													<button type="button" class="btn btn-primary btn-xs">删除</button>
+													<button type="button" class="btn btn-primary btn-xs">修改</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</section>
+							</div>
+						</section>
+					</div>
+					</div>
+
+				</div>
+				<!-- container -->
+				<!-- 批次管理 -->
+
+
+				<div class="container-fluid mianban" id="gongxuguanli">
+					<br/>
+					<div class="row">
+					<div class="col-sm-12">
+						<section class="panel">
+							<header class="panel-heading">
+								工序管理
+							</header>
+							<div class="panel-body">
+								<section>
+									<div class="btn-heading">
+										<!-- Button trigger modal -->
+										<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-gongxu">
+											添加工序
+										</button>
+									</div>
+									<br/>
+									<table class="table table-hover table-bordered ">
+										<thead>
+											<td>
+												产品批次
+											</td>
+											<td>
+												加工编号
+											</td>
+											<td>
+												加工类别
+											</td>
+											<td>
+												操作
+											</td>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													12
+												</td>
+												<td>
+													A
+												</td>
+												<td>
+													Apple
+												</td>
+												<td>
+													<button type="button" class="btn btn-primary btn-xs">删除</button>
+													<button type="button" class="btn btn-primary btn-xs">修改</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</section>
+							</div>
+						</section>
+					</div>
+					</div>
+
+				</div>
+				<!-- container -->
+				<!-- 工序管理 -->
+
+
+				<div class="container-fluid mianban" id="chuchangchanpin">
+					<br/>
+					<div class="row">
+					<div class="col-sm-12">
+						<section class="panel">
+							<header class="panel-heading">
+								出厂产品
+							</header>
+							<div class="panel-body">
+								<section>
+									<table class="table table-hover table-bordered ">
+										<thead>
+											<td>
+												产品名称
+											</td>
+											<td>
+												溯源码
+											</td>
+											<td>
+												销售商
+											</td>
+											<td>
+												销售状态
+											</td>
+											<td>
+												操作
+											</td>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													12
+												</td>
+												<td>
+													A
+												</td>
+												<td>
+													Apple
+												</td>
+												<td>
+													ok
+												</td>
+												<td>
+													<button type="button" class="btn btn-primary btn-xs">详情</button>
+													<button type="button" class="btn btn-primary btn-xs">图片</button>
+													<button type="button" class="btn btn-primary btn-xs">检测</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</section>
+							</div>
+						</section>
+					</div>
+					</div>
+
+				</div>
+				<!-- container -->
+				<!-- 出厂产品 -->
+
+
+				<div class="container-fluid mianban" id="kucunchanpin">
+					<br/>
+					<div class="row">
+					<div class="col-sm-12">
+						<section class="panel">
+							<header class="panel-heading">
+								库存产品
+							</header>
+							<div class="panel-body">
+								<section>
+									<div class="btn-heading">
+										<!-- Button trigger modal -->
+										<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-kucun">
+											添加产品
+										</button>
+									</div>
+									<br/>
+									<table class="table table-hover table-bordered ">
+										<thead>
+											<td>
+												产品名称
+											</td>
+											<td>
+												产品批次
+											</td>
+											<td>
+												溯源码
+											</td>
+											<td>
+												操作
+											</td>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													12
+												</td>
+												<td>
+													A
+												</td>
+												<td>
+													Apple
+												</td>
+												<td>
+													<button type="button" class="btn btn-primary btn-xs">删除</button>
+													<button type="button" class="btn btn-primary btn-xs">修改</button>
+													<button type="button" class="btn btn-primary btn-xs">图片</button>
+													<button type="button" class="btn btn-primary btn-xs">检测</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</section>
+							</div>
+						</section>
+					</div>
+					</div>
+
+				</div>
+				<!-- container -->
+				<!-- 库存产品 -->
+
+
+				<div class="container-fluid mianban" id="jingxiaojilu">
+					<br/>
+					<div class="row">
+					<div class="col-sm-12">
+						<section class="panel">
+							<header class="panel-heading">
+								经销记录
+							</header>
+							<div class="panel-body">
+								<section>
+									<table class="table table-hover table-bordered ">
+										<thead>
+											<td>
+												出厂单号
+											</td>
+											<td>
+												经办人
+											</td>
+											<td>
+												出货日期
+											</td>
+											<td>
+												经销商
+											</td>
+											<td>
+												操作
+											</td>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													12
+												</td>
+												<td>
+													A
+												</td>
+												<td>
+													Apple
+												</td>
+												<td>
+													Apple
+												</td>
+												<td>
+													<button type="button" class="btn btn-primary btn-xs">删除</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</section>
+							</div>
+						</section>
+					</div>
+					</div>
+
+				</div>
+				<!-- container -->
+				<!-- 经销记录 -->
+
+
+				<div class="container-fluid mianban" id="chejianguanli">
+					<br/>
+					<div class="row">
+					<div class="col-sm-12">
+						<section class="panel">
+							<header class="panel-heading">
+								车间管理
+							</header>
+							<div class="panel-body">
+								<section>
+									<div class="btn-heading">
+										<!-- Button trigger modal -->
+										<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-chejian">
+										  添加车间
+										</button>
+									</div>
+									<br/>
+									<table class="table table-hover table-bordered ">
+										<thead>
+											<td>
+												车间编号
+											</td>
+											<td>
+												车间名
+											</td>
+											<td>
+												车间详情
+											</td>
+											<td>
+												操作
+											</td>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													12
+												</td>
+												<td>
+													A
+												</td>
+												<td>
+													Apple
+												</td>
+												<td>
+													<button type="button" class="btn btn-primary btn-xs">删除</button>
+													<button type="button" class="btn btn-primary btn-xs">修改</button>
+													<button type="button" class="btn btn-primary btn-xs">图片</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</section>
+							</div>
+						</section>
+					</div>
+					</div>
+
+				</div>
+				<!-- container -->
+				<!-- 车间管理 -->
+
+
+				<div class="container-fluid mianban" id="gongrenguanli">
+					<br/>
+					<div class="row">
+					<div class="col-sm-12">
+						<section class="panel">
+							<header class="panel-heading">
+								工人管理
+							</header>
+							<div class="panel-body">
+								<section>
+									<div class="btn-heading">
+										<!-- Button trigger modal -->
+										<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-gongren">
+										  添加工人
+										</button>
+									</div>
+									<br/>
+									<table class="table table-hover table-bordered ">
+										<thead>
+											<td>
+												工人姓名
+											</td>
+											<td>
+												工人编号
+											</td>
+											<td>
+												工人电话
+											</td>
+											<td>
+												操作
+											</td>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													12
+												</td>
+												<td>
+													A
+												</td>
+												<td>
+													Apple
+												</td>
+												<td>
+													<button type="button" class="btn btn-primary btn-xs">删除</button>
+													<button type="button" class="btn btn-primary btn-xs">修改</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</section>
+							</div>
+						</section>
+					</div>
+					</div>
+
+				</div>
+				<!-- container -->
+				<!-- 工人管理 -->
+
+
+				<div class="container-fluid mianban" id="shangjiaguanli">
+					<br/>
+					<div class="row">
+					<div class="col-sm-12">
+						<section class="panel">
+							<header class="panel-heading">
+								商家管理
+							</header>
+							<div class="panel-body">
+								<section>
+									<div class="btn-heading">
+										<!-- Button trigger modal -->
+										<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-shangjia">
+										  添加商家
+										</button>
+									</div>
+									<br/>
+									<table class="table table-hover table-bordered ">
+										<thead>
+											<td>
+												商家名称
+											</td>
+											<td>
+												商家地址
+											</td>
+											<td>
+												商家电话
+											</td>
+											<td>
+												操作
+											</td>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													12
+												</td>
+												<td>
+													A
+												</td>
+												<td>
+													Apple
+												</td>
+												<td>
+													<button type="button" class="btn btn-primary btn-xs">删除</button>
+													<button type="button" class="btn btn-primary btn-xs">修改</button>
+													<button type="button" class="btn btn-primary btn-xs">图片</button>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</section>
+							</div>
+						</section>
+					</div>
+					</div>
+
+				</div>
+				<!-- container -->
+				<!-- 商家管理 -->
+
+
+				<div class="container-fluid mianban" id="xitongguanli">
+					<br/>
+					<div class="row">
+					<div class="col-sm-12">
+						<section class="panel">
+							<header class="panel-heading">
+								系统管理
+							</header>
+							<div class="panel-body">
+								<section>
+
+								</section>
+							</div>
+						</section>
+					</div>
+					</div>
+
+				</div>
+				<!-- container -->
+				<!-- 系统管理 -->
+
 			</div>
+			<!-- main -->
 		</div>
+
 </div>
 <div class="bottom"></div>
 <div id="footer"><p>Copyright©  2015 </p></div>
-<script>navList(12);</script>
+<script>navList(12);changeMB(0);</script>
 </body>
+
+<!-- Modal-add-meterial -->
+<div class="modal fade" id="add-material" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">来料信息</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+				  <div class="form-group">
+				    <label for="" class="col-sm-2 control-label">来料编号</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">皮质</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">购买日期</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">产地</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">供应商</label>
+				    <div class="col-sm-10">
+							<select class="form-control">
+							  <option>1</option>
+							  <option>2</option>
+							  <option>3</option>
+							  <option>4</option>
+							  <option>5</option>
+							</select>
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">原料等级</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">检测报告</label>
+						<div class="col-sm-10">
+				      <button type="button" class="btn btn-primary btn-xs">1</button>
+							<!-- add-detect -->
+							<button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#add-detect">添加</button>
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">购买数量</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				<button type="button" class="btn btn-primary">保存</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal-add-detect -->
+<div class="modal fade" id="add-detect" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog modal-sm" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">检测报告</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+				  <div class="form-group">
+				    <label for="" class="col-sm-4 control-label">检测编号</label>
+				    <div class="col-sm-8">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-4 control-label">检测日期</label>
+				    <div class="col-sm-8">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-4 control-label">图片</label>
+				    <div class="col-sm-8">
+				      <input type="file" id="">
+				    </div>
+				  </div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				<button type="button" class="btn btn-primary">保存</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal-添加批次 -->
+<div class="modal fade" id="add-pici" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">批次信息</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+				  <div class="form-group">
+				    <label for="" class="col-sm-2 control-label">产品批次</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">产品名称</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">投产日期</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">产品数量</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">产品信息</label>
+				    <div class="col-sm-10">
+							<input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">来料编号</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				<button type="button" class="btn btn-primary">保存</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal-添加工序 -->
+<div class="modal fade" id="add-gongxu" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">工序信息</h4>
+			</div>
+			<div class="modal-body">
+				<form class="form-horizontal">
+				  <div class="form-group">
+				    <label for="" class="col-sm-2 control-label">产品批次</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">加工编号</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">加工类别</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">加工日期</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">加工详情</label>
+				    <div class="col-sm-10">
+							<input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">车间</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+					<div class="form-group">
+				    <label for="" class="col-sm-2 control-label">工人编号</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="">
+				    </div>
+				  </div>
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+				<button type="button" class="btn btn-primary">保存</button>
+			</div>
+		</div>
+	</div>
+</div>
+
 </html>

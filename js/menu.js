@@ -20,17 +20,17 @@ function navList(id) {
     $obj.find("h4").click(function () {
         var $div = $(this).siblings(".list-item");
         if ($(this).parent().hasClass("selected")) {
-            $div.slideUp(600);
+            $div.slideUp(200);
             $(this).parent().removeClass("selected");
         }
         if ($div.is(":hidden")) {
-            $("#nav_dot li").find(".list-item").slideUp(600);
+            $("#nav_dot li").find(".list-item").slideUp(200);
             $("#nav_dot li").removeClass("selected");
             $(this).parent().addClass("selected");
-            $div.slideDown(600);
+            $div.slideDown(200);
 
         } else {
-            $div.slideUp(600);
+            $div.slideUp(200);
         }
     });
 }
@@ -41,9 +41,9 @@ window.onload=function(){
 	aTr=document.getElementsByTagName("tr");//找所有的行
 	for(i=0;i<aTr.length;i++){
 		if(i%2==0){
-			aTr[i].style.background="#fff";	
+			aTr[i].style.background="#fff";
 		}else{
-			aTr[i].style.background="#ccc";	
+			aTr[i].style.background="#ccc";
 		};
 	};
 };
